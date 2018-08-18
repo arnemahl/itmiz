@@ -1,6 +1,8 @@
 import React from 'react';
 import * as S from './Landingpage.style.js';
 
+import YourLists from './YourLists/YourLists';
+
 import firebase from 'firebase/app';
 import REQ from 'util/REQ';
 
@@ -55,8 +57,9 @@ export default class Landingpage extends React.Component {
           return (
             <S.Page>
               <S.Message>
-                You are signed in!
+                Welcome!
               </S.Message>
+              <YourLists />
             </S.Page>
           );
         } else {
