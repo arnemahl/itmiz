@@ -1,6 +1,10 @@
 {
   "rules": {
-    ".read": true,
-    ".write": true
+    "lists": {
+      "$listId": {
+        ".read": "data.child('members').hasChild(auth.uid)",
+        ".write": "!data.exists() || data.child('members').child(auth.uid).child('type').val() == 'owner'"
+      }
+    }
   }
 }
